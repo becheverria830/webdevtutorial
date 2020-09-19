@@ -5,64 +5,48 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <style type="text/css">
-  	/*#content{
-  		color: white;
-  		text-align: center;
-  		padding-top: 20%;
-  		text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-                 0px 8px 13px rgba(0,0,0,0.1),
-                 0px 18px 23px rgba(0,0,0,0.1);
-  	}*/
-
-
+  	
   	.tog {
-	  background-color: #f7fa5c;
-	  color: white;
-	  cursor: pointer;
+	  background-color: #ccffcc;
 	  padding: 18px;
-	  width: 100%;
+	  width: 50%;
 	  font-size: 15px;
 	  color: black;
 	}
 
 	.active, .tog:hover {
-	  background-color: #f29494;
+	  background-color: #f29455;
 	}
 
 	.stuff {
 	  padding: 0 15px;
 	  max-height: 0;
+	  border-radius: 7px;
+	  transition: max-height 0.1s ease-out;
 	  overflow: hidden;
-	  border-radius: 10px;
-	  transition: max-height 0.2s ease-out;
-	  background-color: #f1f1f1;
 	}
 
 
   </style>
 </head>
 <body>
-<!-- <div class="container">
+
+<div class="container">
 	<div class="row">
 		<div class ="col-lg-12">
-			<div id="content">
-			</div>
+			<h1 style="padding-top: 10%; text-align: center;"><strong>Menu</strong></h1>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <nav class="navbar navbar-default navbar-fixed-top">
-		<!-- <div class="container"> -->
-			<!-- <div class="navbar-header">
-			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
+	<div class="container">
+			<div class="navbar-header">
+			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav" aria-expanded="false">
+			 </button>
 	      <a href="#" class="navbar-brand">Bakers Point</a>
 			</div>
-			<div class="collapse navbar-collapse" id="bs-nav-demo">
+			<div class="collapse navbar-collapse" id="bs-nav">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
@@ -72,45 +56,42 @@
 					<li><a href="#">Sign Up</i></a></li>
 					<li><a href="#">Login</a></li>
 				</ul>
-			</div> -->
-		<!-- </div> -->
+			</div>
+		</div>
 	</nav>
-	<h2><strong>MENU</strong></h2>
-	<button class="tog">Bakery 1</button>
+
+
+	<button class="tog">Item 1</button>
 	<div class="stuff" id="bake1"></div>
-	<button class="tog">Bakery 2</button>
+	<button class="tog">Item 2</button>
 	<div class = "stuff" id="bake2"></div>
-	<button class="tog">Bakery 3</button>
+	<button class="tog">Item 3</button>
 	<div class = "stuff" id="bake3"></div>
-	<button class="tog">Bakery 4</button>
+	<button class="tog">Item 4</button>
 	<div class = "stuff" id="bake4"></div>
-	<button class="tog">Bakery 5</button>
+	<button class="tog">Item 5</button>
 	<div class = "stuff" id="bake5"></div>
-	<button class="collapsible">Bakery 6</button>
+	<button class="tog">Item 6</button>
 	<div class = "stuff" id="bake6"></div>
 
 	<script type="text/javascript">
-	let bake1 = ["Cakes","Velvet","$60","11:00 AM","11:53 AM","25-Jan-21","19-May-21","In Person"];																				
-	let bake2 = ["Muffins/Scones","Chocolate","$4","12:00 PM","12:53 PM","25-Jan-21","19-May-21","In Person"];																								
-	let bake3 = ["Pastries","Strawberry","$7","01:00 PM","01:53 PM","25-Jan-21","19-May-21","In Person"];																								
-	let bake4 = ["Bread","Oat","$3","04:00 PM","04:53 PM","25-Jan-21","19-May-21","In-Person"];																								
-	let bake5 = ["Cupcakes","cherry","$3","05:30 PM","06:23 PM","25-Jan-21","19-May-21","In Person"];																								
-	let bake6 = ["Cinnamon rolls","Apple-pie filling","$6","12:00 PM","12:53 PM","25-Jan-21","19-May-21","In Person"];																							
+	let bake1 = ["Cakes","Velvet","$60","11:00 AM","11:53 AM","25-Jan-21","19-May-21","Home Delivery?"];																				
+	let bake2 = ["Muffins/Scones","Chocolate","$4","12:00 PM","12:53 PM","25-Jan-21","19-May-21","Home Delivery?"];																								
+	let bake3 = ["Pastries","Strawberry","$7","01:00 PM","01:53 PM","25-Jan-21","19-May-21","Home Delivery?"];																								
+	let bake4 = ["Bread","Oat","$3","04:00 PM","04:53 PM","25-Jan-21","19-May-21","Home Delivery?"];																								
+	let bake5 = ["Cupcakes","cherry","$3","05:30 PM","06:23 PM","25-Jan-21","19-May-21","Home Delivery?"];																								
+	let bake6 = ["Cinnamon rolls","Apple-pie filling","$6","12:00 PM","12:53 PM","25-Jan-21","19-May-21","Home Delivery?"];																							
 	function link(array) {
-	    // Create the itenary element:
-	    var itenary = document.createElement('ul');
+	    var itenary = document.createElement('ul');		// Create the itenary element:
 
 	    for(var i = 0; i < array.length; i++) {
-	        // Create the itenary stuff:
-	        var stuff = document.createElement('li');
-	        // Set its contents:
-	        stuff.appendChild(document.createTextNode(array[i]));
-	        // Add it to the itenary:
-	        itenary.appendChild(stuff);
+	        var stuff = document.createElement('li');				// Create the itenary stuff:
+	        stuff.appendChild(document.createTextNode(array[i]));	// Set its contents:
+	        itenary.appendChild(stuff);			// Add it to the itenary:
 	    }
-	    // Finally, return the constructed list:
-	    return itenary;
+	    return itenary;				// Finally, return the constructed itenary:
 	}
+
 	//Add the contents of bake[0] to #bake:
 	document.getElementById("bake1").appendChild(link(bake1));
 	document.getElementById("bake2").appendChild(link(bake2));
@@ -119,10 +100,10 @@
 	document.getElementById("bake5").appendChild(link(bake5));
 	document.getElementById("bake6").appendChild(link(bake6));
 
-	var col = document.getElementsByClassName("tog");
+	var foo = document.getElementsByClassName("tog");
 
-	for (var i = 0; i < col.length; i++) {
-	  col[i].addEventListener("click", function() {
+	for (var i = 0; i < foo.length; i++) {
+	  foo[i].addEventListener("click", function() {
 	    this.classList.toggle("active");
 	    var content = this.nextElementSibling;
 	    if (content.style.maxHeight){
@@ -134,7 +115,7 @@
 	}
 	
 </script>
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 </body>
 </html>
