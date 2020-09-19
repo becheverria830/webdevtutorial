@@ -1,0 +1,61 @@
+/* Background */
+body {
+	background-color: #e09e67;
+}
+
+/* Home */
+.home-main h1 {
+	padding-top: 10%; 
+	font-size: 8em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.home-main img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 50%;
+}
+
+/* About Us */
+#about-title{
+	padding-top: 10%; 
+	font-size: 4em;
+	text-align: center;
+	font-weight: bold;
+}
+.about p {
+	padding-top: 10%; 
+	font-size: 30px;
+	text-align: justify;
+}
+
+/* Menu */
+.menu h1{
+	padding-top: 10%; 
+	font-size: 5em;
+	text-align: center;
+	font-weight: bold;
+}
+.tog {
+  background-color: #ccffcc;
+  padding: 18px;
+  width: 50%;
+  font-size: 15px;
+  color: black;
+}
+
+.active, .tog:hover {
+  background-color: #f29455;
+}
+
+.stuff {
+  padding: 0 15px;
+  max-height: 0;
+  border-radius: 7px;
+  transition: max-height 0.1s ease-out;
+  overflow: hidden;
+}
+
+
