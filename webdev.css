@@ -9,6 +9,7 @@ body {
 	font-size: 8em;
 	text-align: center;
 	font-weight: bold;
+	font-family: 'Lobster', cursive;
 }
 
 .home-main img {
@@ -16,6 +17,8 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 50%;
+	width: 100%;
+	height: 100%;
 }
 
 /* About Us */
@@ -26,7 +29,7 @@ body {
 	font-weight: bold;
 }
 .about p {
-	padding-top: 10%; 
+	padding-top: 0%; 
 	font-size: 30px;
 	text-align: justify;
 }
@@ -44,6 +47,8 @@ body {
   width: 50%;
   font-size: 15px;
   color: black;
+  margin: auto;
+  display: block;
 }
 
 .active, .tog:hover {
